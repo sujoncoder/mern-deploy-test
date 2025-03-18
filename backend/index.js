@@ -4,8 +4,13 @@ const cors = require('cors');
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello World...' });
+});
+
+
 app.get('/api', (req, res) => {
-    res.json({ message: 'Hello from the backend 2.0!' });
+    res.json({ message: 'Hello from the backend API' });
 });
 
 app.listen(5000, () => {
